@@ -296,25 +296,19 @@ function Get-Theme {
 function Get-Theme2 {
     if (-not $global:canConnectToGitHub) {
         Write-Host "Skipping theme from uh-my-posh due to GitHub.com not responding within 1 second." -ForegroundColor Yellow
-        return
-    }
-
-    if (Test-Path -Path $PROFILE.CurrentUserAllHosts -PathType leaf) {
         $existingTheme = Select-String -Raw -Path $PROFILE.CurrentUserAllHosts -Pattern "oh-my-posh init pwsh --config"
         if ($null -ne $existingTheme) {
             Invoke-Expression $existingTheme
             return
         }
-    } 
-    else {
-        Write-Host "URL theme2"
-        oh-my-posh init pwsh --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/cobalt2.omp.json | Invoke-Expression
-        Invoke-Expression (& { (zoxide init powershell | Out-String) })
+    } else {
+        oh-my-posh init pwsh --config "D:\dotfiles\powershell-profile\theme\cobalt2.omp.json" | Invoke-Expression
     }
 }
 ## Final Line to set prompt
 Get-Theme2
 
+# C:\Users\danng\AppData\Local\oh-my-posh\cobalt2.omp.json
 
 # Help Function
 function Show-Help {
