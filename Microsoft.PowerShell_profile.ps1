@@ -211,10 +211,14 @@ function docs { Set-Location -Path $HOME\Documents }
 
 function dtop { Set-Location -Path $HOME\Desktop }
 
+function d { Set-Location -Path D }
+
 # Quick Access to Editing the Profile
 function ep { vim $PROFILE }
 
 # Simplified Process Management
+function apps { get-process | where-object {$_.mainwindowhandle -ne 0} | select-object name, mainwindowtitle }
+
 function k9 { Stop-Process -Name $args[0] }
 
 # Enhanced Listing
