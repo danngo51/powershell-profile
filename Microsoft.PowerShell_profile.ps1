@@ -353,6 +353,10 @@ docs - Changes the current directory to the user's Documents folder.
 
 dtop - Changes the current directory to the user's Desktop folder.
 
+c - Change the current directory to c-drive
+
+d - Change the current directory to d-drive
+
 apps - Lists running applications.
 
 k9 <name> - Kills a process by name.
