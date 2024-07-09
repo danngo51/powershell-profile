@@ -83,6 +83,10 @@ function Update-PowerShell {
 }
 Update-PowerShell
 
+function up {
+    Update-Profile
+    Update-PowerShell
+}
 
 # Admin Check and Prompt Customization
 $isAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
@@ -212,9 +216,6 @@ function docs { Set-Location -Path $HOME\Documents }
 function dtop { Set-Location -Path $HOME\Desktop }
 
 function d { Set-Location -Path D:\ }
-
-# Quick Access to Editing the Profile
-function ep { vim $PROFILE }
 
 # Simplified Process Management
 function apps { get-process | where-object {$_.mainwindowhandle -ne 0} | select-object name, mainwindowtitle }
