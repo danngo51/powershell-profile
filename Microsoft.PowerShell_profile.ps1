@@ -217,6 +217,8 @@ function dtop { Set-Location -Path $HOME\Desktop }
 
 function d { Set-Location -Path D:\ }
 
+function 
+
 # Simplified Process Management
 function apps { get-process | where-object {$_.mainwindowhandle -ne 0} | select-object name, mainwindowtitle }
 
@@ -244,7 +246,7 @@ function gac {
     git commit -m "$args"
 }
 
-function gacp {
+function gg {
     git add .
     git commit -m "$args"
     git push
@@ -298,6 +300,8 @@ PowerShell Profile Help
 Update-Profile - Checks for profile updates from a remote repository and updates if necessary.
 
 Update-PowerShell - Checks for the latest PowerShell release and updates if a new version is available.
+
+up - Updates the profile and PowerShell.
 
 Edit-Profile - Opens the current user's profile for editing using the configured editor.
 
