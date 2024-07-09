@@ -211,7 +211,7 @@ function docs { Set-Location -Path $HOME\Documents }
 
 function dtop { Set-Location -Path $HOME\Desktop }
 
-function d { Set-Location -Path D }
+function d { Set-Location -Path D:\ }
 
 # Quick Access to Editing the Profile
 function ep { vim $PROFILE }
@@ -344,6 +344,8 @@ dtop - Changes the current directory to the user's Desktop folder.
 
 ep - Opens the profile for editing.
 
+apps - Lists running applications.
+
 k9 <name> - Kills a process by name.
 
 la - Lists all files in the current directory with detailed formatting.
@@ -362,7 +364,7 @@ g - Changes to the GitHub directory.
 
 gcom <message> - Adds all changes and commits with the specified message.
 
-lazyg <message> - Adds all changes, commits with the specified message, and pushes to the remote repository.
+gacp <message> - Adds all changes, commits with the specified message, and pushes to the remote repository.
 
 sysinfo - Displays detailed system information.
 
