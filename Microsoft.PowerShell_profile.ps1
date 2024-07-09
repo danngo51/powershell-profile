@@ -34,7 +34,7 @@ function Update-Profile {
     }
 
     try {
-        Write-Host "Pulling Profile..." -ForegroundColor Magenta
+        Write-Host "Pulling Profile..." -ForegroundColor Cyan
         $url = "https://raw.githubusercontent.com/danngo51/powershell-profile/main/Microsoft.PowerShell_profile.ps1"
         $oldhash = Get-FileHash $PROFILE
         Invoke-RestMethod $url -OutFile "$env:temp/Microsoft.PowerShell_profile.ps1"
@@ -43,7 +43,7 @@ function Update-Profile {
             Copy-Item -Path "$env:temp/Microsoft.PowerShell_profile.ps1" -Destination $PROFILE -Force
             Write-Host "Profile has been updated. Please restart your shell to reflect changes" -ForegroundColor Magenta
         } else {
-            Write-Host "Profile already up to date." -ForegroundColor Magenta
+            Write-Host "Profile already up to date." -ForegroundColor Green
         }
     } catch {
         Write-Error "Unable to check for `$profile updates"
