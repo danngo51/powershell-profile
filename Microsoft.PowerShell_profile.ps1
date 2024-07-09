@@ -213,7 +213,7 @@ function dtop { Set-Location -Path $HOME\Desktop }
 
 function d { Set-Location -Path D:\ }
 
-function 
+function c { Set-Location -Path C:\ }
 
 # Simplified Process Management
 function apps { 
