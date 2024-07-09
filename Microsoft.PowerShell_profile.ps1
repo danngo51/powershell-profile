@@ -296,13 +296,14 @@ function Get-Theme {
 function Get-Theme2 {
     if (-not $global:canConnectToGitHub) {
         Write-Host "Skipping theme from uh-my-posh due to GitHub.com not responding within 1 second." -ForegroundColor Yellow
+        Write-Host "D-drive json"
+        oh-my-posh init pwsh --config "D:\dotfiles\powershell-profile\theme\cobalt2.omp.json" | Invoke-Expression
+    } else {
         $existingTheme = Select-String -Raw -Path $PROFILE.CurrentUserAllHosts -Pattern "oh-my-posh init pwsh --config"
         if ($null -ne $existingTheme) {
             Invoke-Expression $existingTheme
             return
         }
-    } else {
-        oh-my-posh init pwsh --config "D:\dotfiles\powershell-profile\theme\cobalt2.omp.json" | Invoke-Expression
     }
 }
 ## Final Line to set prompt
