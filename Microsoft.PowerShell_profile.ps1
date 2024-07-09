@@ -296,8 +296,6 @@ function Get-Theme {
 function Get-Theme2 {
     if (-not $global:canConnectToGitHub) {
         Write-Host "Skipping theme from uh-my-posh due to GitHub.com not responding within 1 second." -ForegroundColor Yellow
-        Write-Host "D-drive json"
-        oh-my-posh init pwsh --config "D:\dotfiles\powershell-profile\theme\cobalt2.omp.json" | Invoke-Expression
         Invoke-Expression (& { (zoxide init powershell | Out-String) })
     } else {
         oh-my-posh init pwsh --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/cobalt2.omp.json | Invoke-Expression
