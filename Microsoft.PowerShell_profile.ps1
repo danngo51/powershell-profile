@@ -278,6 +278,7 @@ function Get-Theme {
 }
 
 ## Final Line to set prompt
+Get-Theme
 
 
 # Help Function
