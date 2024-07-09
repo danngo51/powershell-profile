@@ -124,7 +124,6 @@ function ff($name) {
 # Network Utilities
 function Get-PubIP { (Invoke-WebRequest http://ifconfig.me/ip).Content }
 
-
 # System Utilities
 function admin {
     if ($args.Count -gt 0) {
