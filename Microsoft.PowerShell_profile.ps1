@@ -146,6 +146,14 @@ function uptime {
     }
 }
 
+function Edit-Profile {
+    vim $PROFILE.CurrentUserAllHosts
+}
+
+# Quick Access to Editing the Profile
+function ep { Edit-Profile }
+
+
 function reload-profile {
     & $profile
 }
