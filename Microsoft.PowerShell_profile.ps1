@@ -282,7 +282,7 @@ Set-PSReadLineOption -Colors @{
 function Get-Theme2 {
     if (-not $global:canConnectToGitHub) {
         Write-Host "Skipping theme from uh-my-posh due to GitHub.com not responding within 1 second." -ForegroundColor Yellow
-        oh-my-posh init pwsh --config "D:\dotfiles\powershell-profile\Themes\default.omp.json" | Invoke-Expression
+        oh-my-posh init pwsh --config "D:\dotfiles\powershell-profile\Themes\cobalt2.omp.json" | Invoke-Expression
         Invoke-Expression (& { (zoxide init powershell | Out-String) })
     } else {
         oh-my-posh init pwsh --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/cobalt2.omp.json | Invoke-Expression
