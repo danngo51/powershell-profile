@@ -299,8 +299,6 @@ Update-PowerShell - Checks for the latest PowerShell release and updates if a ne
 
 up - Updates the profile and PowerShell.
 
-Edit-Profile - Opens the current user's profile for editing using the configured editor.
-
 touch <file> - Creates a new empty file.
 
 ff <name> - Finds files recursively with the specified name.
@@ -310,8 +308,6 @@ Get-PubIP - Retrieves the public IP address of the machine.
 winutil - Runs the WinUtil script from Chris Titus Tech.
 
 uptime - Displays the system uptime.
-
-reload-profile - Reloads the current user's PowerShell profile.
 
 unzip <file> - Extracts a zip file to the current directory.
 
@@ -342,8 +338,6 @@ mkcd <dir> - Creates and changes to a new directory.
 docs - Changes the current directory to the user's Documents folder.
 
 dtop - Changes the current directory to the user's Desktop folder.
-
-ep - Opens the profile for editing.
 
 apps - Lists running applications.
 
