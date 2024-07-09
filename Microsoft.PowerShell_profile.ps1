@@ -216,7 +216,9 @@ function d { Set-Location -Path D:\ }
 function 
 
 # Simplified Process Management
-function apps { get-process | where-object {$_.mainwindowhandle -ne 0} | select-object name, mainwindowtitle }
+function apps { 
+    get-process | where-object {$_.mainwindowhandle -ne 0} | select-object name, mainwindowtitle
+}
 
 function k9 { Stop-Process -Name $args[0] }
 
