@@ -114,9 +114,6 @@ $EDITOR = if (Test-CommandExists nvim) { 'nvim' }
           else { 'notepad' }
 Set-Alias -Name vim -Value $EDITOR
 
-function Edit-Profile {
-    vim $PROFILE.CurrentUserAllHosts
-}
 function touch($file) { "" | Out-File $file -Encoding ASCII }
 function ff($name) {
     Get-ChildItem -recurse -filter "*${name}*" -ErrorAction SilentlyContinue | ForEach-Object {
