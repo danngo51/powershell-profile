@@ -34,6 +34,7 @@ function Update-Profile {
     }
 
     try {
+        Write-Host "Pulling Profile..." -ForegroundColor Magenta
         $url = "https://raw.githubusercontent.com/danngo51/powershell-profile/main/Microsoft.PowerShell_profile.ps1"
         $oldhash = Get-FileHash $PROFILE
         Invoke-RestMethod $url -OutFile "$env:temp/Microsoft.PowerShell_profile.ps1"
