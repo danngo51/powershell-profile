@@ -35,4 +35,4 @@ Then run the `Edit-Profile` or `ep` function to edit the seperate profile file f
 
 Now, enjoy your enhanced and stylish PowerShell experience! 🚀
 
-
+**NOTE: The `Microsoft.PowerShell_profile.ps1` has the theme hardcoded hence the symbolink. Any edits to this repo and it will be updated to your profile.**
