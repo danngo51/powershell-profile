@@ -236,6 +236,18 @@ function la { Get-ChildItem -Path . -Force | Format-Table -AutoSize }
 function ll { Get-ChildItem -Path . -Force -Hidden | Format-Table -AutoSize }
 
 # Git Shortcuts
+# Remove the read-only alias 'gp'
+if (Test-Path alias:gp) {
+    Set-Alias gp -Value Get-Alias -Option None -Force
+    Remove-Item alias:gp -Force
+}
+
+# Remove the read-only alias 'gc'
+if (Test-Path alias:gc) {
+    Set-Alias gc -Value Get-Command -Option None -Force
+    Remove-Item alias:gc -Force
+}
+
 function gs { git status }
 
 function ga { git add . }
