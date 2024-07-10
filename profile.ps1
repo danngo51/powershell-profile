@@ -1,5 +1,5 @@
 function hej {
-  Write-Host "hej"
+  Write-Host "hej!!!"
 }
 
 function open {
