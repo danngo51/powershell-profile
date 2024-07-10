@@ -216,6 +216,8 @@ function mkcd { param($dir) mkdir $dir -Force; Set-Location $dir }
 # Navigation Shortcuts
 function docs { Set-Location -Path $HOME\Documents }
 
+function dox { Set-Location -Path $HOME\Documents }
+
 function dtop { Set-Location -Path $HOME\Desktop }
 
 function d { Set-Location -Path D:\ }
