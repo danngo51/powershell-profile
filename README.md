@@ -31,6 +31,8 @@ or
 mklink /D "C:\LinkToFolder" "C:\Users\YourUsername\Documents\TargetFolder"
 ```
 
-run the `Edit-Profile` function to create a separate profile file for your current user. Make any changes and customizations in this new file named `profile.ps1`.
+Then run the `Edit-Profile` or `ep` function to edit the seperate profile file for your current user. Make any changes and customizations in this new file named `profile.ps1`.
 
 Now, enjoy your enhanced and stylish PowerShell experience! 🚀
+
+
