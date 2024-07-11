@@ -26,3 +26,7 @@ if (Test-Path alias:ff) {
 function ff {
   fzf
 }
+
+function quit {
+  exit
+}
