@@ -34,3 +34,8 @@ function quit {
 function imager {
   ii "C:\Program Files (x86)\Raspberry Pi Imager\rpi-imager.exe"
 }
+
+function profile { 
+  Set-Location -Path D:\dotfiles\powershell-profile 
+}
+
