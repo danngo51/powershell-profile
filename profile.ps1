@@ -30,3 +30,7 @@ function ff {
 function quit {
   exit
 }
+
+function imager {
+  ii "C:\Program Files (x86)\Raspberry Pi Imager\rpi-imager.exe"
+}
