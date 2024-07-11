@@ -18,3 +18,11 @@ function chrome {
   ii "C:\Program Files\Google\Chrome\Application\chrome.exe"
 }
 
+if (Test-Path alias:ff) {
+    Set-Alias ff -Value Get-Command -Option None -Force
+    Remove-Item alias:ff -Force
+}
+
+function ff {
+  fzf
+}
