@@ -21,8 +21,15 @@ function chrome {
 
 function of {
   $path= (fzf)
-  $location = Get-Location
+  echo $path
+  $location = pwd
   echo $location
+  $locationpath = "$location"+"\"+"$path"
+  try {
+    ii $locationpath
+  } catch {
+    Write-Host "No file or directory found"
+  }
 }
 
 function quit {
