@@ -115,10 +115,15 @@ $EDITOR = if (Test-CommandExists nvim) { 'nvim' }
 Set-Alias -Name vim -Value $EDITOR
 
 function touch($file) { "" | Out-File $file -Encoding ASCII }
-function ff($name) {
+
+function f($name) {
     Get-ChildItem -recurse -filter "*${name}*" -ErrorAction SilentlyContinue | ForEach-Object {
         Write-Output "$($_.FullName)"
     }
+}
+
+function ff {
+    fzf
 }
 
 # Network Utilities
