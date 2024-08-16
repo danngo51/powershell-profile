@@ -23,10 +23,6 @@ if (Test-Path alias:ff) {
     Remove-Item alias:ff -Force
 }
 
-function ff {
-  fzf
-}
-
 function quit {
   exit
 }
