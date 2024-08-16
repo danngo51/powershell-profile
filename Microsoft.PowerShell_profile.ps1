@@ -116,16 +116,6 @@ Set-Alias -Name vim -Value $EDITOR
 
 function touch($file) { "" | Out-File $file -Encoding ASCII }
 
-function f($name) {
-    Get-ChildItem -recurse -filter "*${name}*" -ErrorAction SilentlyContinue | ForEach-Object {
-        Write-Output "$($_.FullName)"
-    }
-}
-
-function ff {
-    fzf
-}
-
 # Network Utilities
 function Get-PubIP { (Invoke-WebRequest http://ifconfig.me/ip).Content }
 
@@ -210,6 +200,8 @@ function tail {
   Get-Content $Path -Tail $n -Wait:$f
 }
 
+
+
 # Quick File Creation
 function nf { param($name) New-Item -ItemType "file" -Path . -Name $name }
 
@@ -218,7 +210,19 @@ function mkcd { param($dir) mkdir $dir -Force; Set-Location $dir }
 
 ### Quality of Life Aliases
 
+
 # Navigation Shortcuts
+
+function f($name) {
+    Get-ChildItem -recurse -filter "*${name}*" -ErrorAction SilentlyContinue | ForEach-Object {
+        Write-Output "$($_.FullName)"
+    }
+}
+
+function ff {
+    fzf --height 60% --layout reverse --border
+}
+
 function docs { Set-Location -Path $HOME\Documents }
 
 function dox { Set-Location -Path $HOME\Documents }
@@ -241,11 +245,6 @@ function la { Get-ChildItem -Path . -Force | Format-Table -AutoSize }
 function ll { Get-ChildItem -Path . -Force -Hidden | Format-Table -AutoSize }
 
 # Git Shortcuts
-
-if (Test-Path alias:ff) {
-    Set-Alias ff -Value Get-Command -Option None -Force
-    Remove-Item alias:ff -Force
-}
 # Remove the read-only alias 'gp'
 if (Test-Path alias:gp) {
     Set-Alias gp -Value Get-Alias -Option None -Force
