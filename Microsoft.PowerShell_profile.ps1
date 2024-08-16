@@ -152,6 +152,10 @@ function reload-profile {
     & $profile
 }
 
+function reload {
+    & $profile
+}
+
 function unzip ($file) {
     Write-Output("Extracting", $file, "to", $pwd)
     $fullFile = Get-ChildItem -Path $pwd -Filter $file | ForEach-Object { $_.FullName }

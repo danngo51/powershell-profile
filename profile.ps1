@@ -19,6 +19,11 @@ function chrome {
 }
 
 
+function of {
+  $path= (fzf)
+  $location = Get-Location
+  echo $location
+}
 
 function quit {
   exit
