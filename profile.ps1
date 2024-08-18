@@ -18,6 +18,15 @@ function chrome {
   ii "C:\Program Files\Google\Chrome\Application\chrome.exe"
 }
 
+function tidal {
+  ii "C:\Users\danng\AppData\Local\TIDAL\TIDAL.exe"
+}
+
+function discord {
+  ii "C:\Users\danng\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Discord Inc\Discord.lnk"
+}
+
+
 
 function of {
   $path= (fzf)
@@ -38,6 +47,10 @@ function quit {
 
 function imager {
   ii "C:\Program Files (x86)\Raspberry Pi Imager\rpi-imager.exe"
+}
+
+function messenger {
+  ii "C:\Users\danng\AppData\Local\Programs\Messenger\messenger.exe"
 }
 
 function profile { 
