@@ -233,6 +233,8 @@ function dox { Set-Location -Path $HOME\Documents }
 
 function dtop { Set-Location -Path $HOME\Desktop }
 
+function downloads { Set-Location -Path $HOME\Downloads }
+
 function d { Set-Location -Path D:\ }
 
 function c { Set-Location -Path C:\ }
