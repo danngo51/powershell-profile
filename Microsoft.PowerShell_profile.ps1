@@ -205,7 +205,6 @@ function tail {
 }
 
 
-
 # Quick File Creation
 function nf { param($name) New-Item -ItemType "file" -Path . -Name $name }
 
@@ -234,6 +233,7 @@ function dox { Set-Location -Path $HOME\Documents }
 function dtop { Set-Location -Path $HOME\Desktop }
 
 function downloads { Set-Location -Path $HOME\Downloads }
+
 
 function d { Set-Location -Path D:\ }
 
@@ -306,6 +306,8 @@ Set-PSReadLineOption -Colors @{
     Parameter = 'Green'
     String = 'DarkCyan'
 }
+
+
 
 # Get theme
 function Get-Theme {

@@ -57,3 +57,4 @@ function profile {
   Set-Location -Path D:\dotfiles\powershell-profile 
 }
 
+function bin { Set-Location -Path Recycle.Bin }
