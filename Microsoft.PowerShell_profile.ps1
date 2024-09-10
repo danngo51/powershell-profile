@@ -234,6 +234,7 @@ function dtop { Set-Location -Path $HOME\Desktop }
 
 function downloads { Set-Location -Path $HOME\Downloads }
 
+function down { Set-Location -Path $HOME\Downloads }
 
 function d { Set-Location -Path D:\ }
 
