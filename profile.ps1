@@ -53,6 +53,14 @@ function messenger {
   ii "C:\Users\danng\AppData\Local\Programs\Messenger\messenger.exe"
 }
 
+function kak {
+  ii "C:\Program Files (x86)\Kakao\KakaoTalk\KakaoTalk.exe"
+}
+
+function kakao {
+  ii "C:\Program Files (x86)\Kakao\KakaoTalk\KakaoTalk.exe"
+}
+
 function profile { 
   Set-Location -Path D:\dotfiles\powershell-profile 
 }
