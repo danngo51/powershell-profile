@@ -66,3 +66,9 @@ function profile {
 }
 
 function bin { Set-Location -Path Recycle.Bin }
+
+
+function test {
+  Write-Host "test!!!"
+}
+
